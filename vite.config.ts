@@ -3,7 +3,14 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
+// Set VITE_BASE_PATH to "/<repo-name>/" when deploying to GitHub Pages
+// (a project site is served from https://<user>.github.io/<repo-name>/).
+// Locally, and when deploying to a custom domain or a user/org site
+// (https://<user>.github.io/), it defaults to "/".
+const base = process.env.VITE_BASE_PATH ?? '/'
+
 export default defineConfig({
+  base,
   plugins: [
     react(),
     tailwindcss(),
@@ -18,8 +25,8 @@ export default defineConfig({
         theme_color: '#F7F3EC',
         background_color: '#F7F3EC',
         display: 'standalone',
-        start_url: '/',
-        scope: '/',
+        start_url: '.',
+        scope: '.',
         lang: 'da',
         icons: [
           { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png' },
