@@ -6,7 +6,7 @@ export function Home() {
   return (
     <div className="mx-auto flex min-h-full max-w-lg flex-col justify-center gap-8 px-5 py-10">
       <div className="text-center">
-        <p className="font-display text-sm uppercase tracking-[0.2em] text-honey-deep">Find My Stuff</p>
+        <p className="font-display text-sm uppercase tracking-[0.2em] text-honey-deep">Find My Things</p>
         <h1 className="mt-2 font-display text-4xl font-semibold text-ink dark:text-ink-dark">Hvad vil du?</h1>
       </div>
 
